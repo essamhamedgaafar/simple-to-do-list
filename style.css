@@ -1,0 +1,154 @@
+*, *:focus, *:hover, *:active {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    box-shadow:none;
+}
+body {
+    background-color: black;
+    background-size: cover;
+    justify-content: center;
+}
+.input_container {
+    height: 5rem;
+    margin-top: 1rem;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+}
+.input{
+    width: 40rem;
+    height: 5rem;
+    font-size: larger;
+    text-align: center;
+}
+.add {
+    background-color: white;
+    color: black;
+    width: 5rem;
+    height: 100%;
+    margin-left: -1rem;
+    border: 1px solid rgb(156, 142, 142);
+    -webkit-transition: 1s;
+    
+}
+.add:hover {
+    background-color: black;
+    color: white;
+}
+#toDo0 {
+    display: none;
+}
+.toDoItem {
+    display: flex;
+    height: 5rem;
+    border-bottom:1px solid black;
+    width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 1rem;
+    
+}
+.toDoItem div:nth-child(1){
+    width: 80%;
+    padding: .6rem;
+}
+.toDoItem_Title {
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-top: .5rem;
+}
+.toDoItem span{
+    display: block;
+    height: 100%;
+    width: 5.2rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.527);
+}
+.toDoItem span i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    -webkit-transition: .4s;
+}
+.remove ,.alarm ,.go{
+    background-color: red;
+    color: white;
+    margin: 0px;
+}
+.toDoItem span:hover i {
+    background-color: rgba(255, 0, 0, 0.452);
+}
+.description,.alarmCon {
+    position: absolute;
+    width:44rem;
+    height: 25rem;
+    background-color: white;
+    margin-top: 5rem;
+}
+.description_input {
+    width: 90%;
+    height: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-decoration: dashed;
+    padding: 1rem;
+}
+
+.description,.alarmCon {
+    display: none;
+}
+#alarmTime {
+    width: 80%;
+    height: 20%;
+    display: block;
+    margin: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#clock {
+    font-size: 6rem;
+    background-color: black;
+    border-radius: 2rem;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+#setAlarm, #clearAlarm {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 0px;
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+}
+#setAlarm {
+    margin-left: 5rem;
+}
+.stopAlarm { 
+    width: 44.4rem;
+    height: 30rem;
+    background-color: white;
+    position: absolute;
+    left: 33.7%;
+    display: none;
+    z-index: 100;
+}
+#clearAlarm {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+}
+#clearAlarm:hover {
+    -webkit-transition: 1s;
+    background-color: black;
+}

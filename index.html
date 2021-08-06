@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!--*font & icons-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="bower_components/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="fontAw.js"></script>
+
+
+    <link rel="stylesheet" href="./style.css">
+    <title>toDoList</title>
+</head>
+<body>
+    <p id="clock">00:00:00</p>
+    <div class="input_container">
+        <input type="text" class="input" placeholder="TITLE" id="input">
+        <button class="add" onclick="add()"><span><i class="fa fa-arrow-right" aria-hidden="true"></i></span></button>
+    </div>
+    <div class="toDoItem" id="toDo0">
+            <div onclick="done(this)">
+                <p class="toDoItem_Title">TITLE</p>
+            </div>
+            <div>
+                <span onclick="showAlr(this)"><i class="fal fa-alarm-snooze alarm"></i></span>
+            </div>
+            <div>
+                <span onclick="remove(this)"><i class="fal fa-times remove"></i></span>
+            </div>
+            <div>
+                <span onclick="showDes(this)"><i class="fas fa-caret-right go"></i></span>
+            </div>
+            <div class="description">
+                <p style="font-size: 2rem;margin-left: 2rem;color: black;">description :</p>
+                <textarea name="comment" form="usrform" class="description_input"></textarea>
+            </div>
+            <div class="alarmCon">
+                <input type="datetime-local" name="alarmTime" id="alarmTime" onchange="setAlarmTime(this.value)">
+                <div style="margin-left: 12rem;" class="controls">
+                    <button id="setAlarm" class="button set-alarm" onclick="setAlarm(this)">Set Alarm</button>
+                </div>
+            </div>
+    </div>
+    <div class="stopAlarm" id="stop">
+        <button id="clearAlarm" class="clear-alarm" onclick="clearAlarm()">Clear Alarm</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
